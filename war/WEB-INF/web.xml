@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+
+    <servlet>
+    <servlet-name>puzzleServlet</servlet-name>
+    <servlet-class>com.focaplo.wordee.server.impl.PuzzleRemoteServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>puzzleServlet</servlet-name>
+    <url-pattern>/wordee/puzzle</url-pattern>
+  </servlet-mapping>
+<!--  
+ <filter>
+        <filter-name>logSpecial</filter-name>
+        <filter-class>com.focaplo.wordee.server.impl.LogFileFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>logSpecial</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+-->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
